@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="system" method="upgrade" >
+	<name>Playground - Mighty Addons</name>
+	<author>Mighty Addons</author>
+	<creationDate>March 2023</creationDate>
+	<copyright>Copyright (C) Mighty Addons</copyright>
+	<license>https://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only</license>
+	<assetsLicense>Mighty Addons Proprietary Use License (https://mightyaddons.com/license)</assetsLicense>
+	<authorEmail>stribog@mightyaddons.com</authorEmail>
+	<authorUrl>https://mightyaddons.com</authorUrl>
+	<version>1.0</version>
+	<description>Dynamic Content Sources for YOOtheme Pro that fetch content from Unsplash using their API</description>
+	<files>
+		<filename plugin="mightysources_unsplashapi">mightysources_unsplashapi.php</filename>
+        <folder>modules</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="apikey-unsplash"
+					type="text"
+					label="API Key - Unsplash.com"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
