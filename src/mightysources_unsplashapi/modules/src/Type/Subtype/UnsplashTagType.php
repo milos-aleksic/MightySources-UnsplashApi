@@ -1,7 +1,6 @@
 <?php
 
-namespace PlayGround\Source\Type\Unsplash\Subtype;
-
+namespace MightySourcesUnsplashApi\Type\Subtype;
 
 use function YOOtheme\trans;
 use Joomla\CMS\Factory;

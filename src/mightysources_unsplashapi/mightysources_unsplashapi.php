@@ -15,7 +15,7 @@ use YOOtheme\Path;
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class plgSystemMightySources_UnspashApi extends CMSPlugin
+class plgSystemMightySources_UnsplashApi extends CMSPlugin
 {
     public function onAfterInitialise()
     {
@@ -29,7 +29,7 @@ class plgSystemMightySources_UnspashApi extends CMSPlugin
 
 			$themeroot = Path::get('~theme');
 			$loader    = require "{$themeroot}/vendor/autoload.php";
-			$loader->setPsr4("MightySources\\UnspashAPi\\", __DIR__ . "/modules/src");
+			$loader->setPsr4("MightySourcesUnsplashApi\\", __DIR__ . "/modules/src");
 
 			// set alias
 			Path::setAlias('~mightysources_unsplashapi', $root);

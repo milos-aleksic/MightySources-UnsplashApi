@@ -1,8 +1,8 @@
 <?php
 
-namespace MightySources\UnsplashApi\Type\Subtype;
+namespace MightySourcesUnsplashAPi\Type;
 
-use MightySources\UnsplashApi\UnsplashApi;
+use MightySourcesUnsplashAPi\UnsplashApi;
 
 use function YOOtheme\trans;
 use Joomla\CMS\Factory;

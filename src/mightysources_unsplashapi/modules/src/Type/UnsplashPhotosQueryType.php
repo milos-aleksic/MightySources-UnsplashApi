@@ -1,8 +1,8 @@
 <?php
 
-namespace MightySources\UnsplashApi\Type;
+namespace MightySourcesUnsplashApi\Type;
 
-use MightySources\UnsplashApi\UnsplashApi;
+use MightySourcesUnsplashApi\UnsplashApi;
 
 use function YOOtheme\trans;
 use Joomla\CMS\Factory;
@@ -48,7 +48,7 @@ class UnsplashPhotosQueryType
                     ],
                     'metadata' => [
                         'label' => trans('Unsplash Photos'),
-                        'group' => trans('Prototyping'),
+                        'group' => trans('Mighty Sources'),
                         'fields' => [
                             '_query' => [
                                 'label' => trans('Filter Images'),

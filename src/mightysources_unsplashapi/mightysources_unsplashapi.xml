@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.2" type="plugin" group="system" method="upgrade" >
-	<name>Playground - Mighty Addons</name>
+	<name>Migthy Sources for Unsplash Api - Mighty Addons for YOOtheme Pro</name>
 	<author>Mighty Addons</author>
 	<creationDate>March 2023</creationDate>
 	<copyright>Copyright (C) Mighty Addons</copyright>
@@ -21,7 +21,7 @@
 				<field
 					name="apikey-unsplash"
 					type="text"
-					label="API Key - Unsplash.com"
+					label="Access Key"
 				/>
 
 			</fieldset>

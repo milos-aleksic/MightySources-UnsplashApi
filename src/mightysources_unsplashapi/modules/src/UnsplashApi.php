@@ -8,7 +8,7 @@
  *
  */
 
-namespace MightySources\UnsplashApi;
+namespace MightySourcesUnsplashApi;
 
 use Joomla\CMS\Plugin\PluginHelper;
 use Joomla\CMS\Http\HttpFactory;
@@ -18,8 +18,7 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Uri\Uri;
 
 class UnsplashApi
-{
-
+{    
     public static function resolve($endpoint, $args = [])
     {
         $params = [];
@@ -86,8 +85,10 @@ class UnsplashApi
 
     private static function _get($endpoint, $args = [])
     {
-        $plgParams = new Registry(PluginHelper::getPlugin('system', 'playground')->params);
-        $client_id = $plgParams->get('apikey-unsplash');
+
+        $plgParams = new Registry(PluginHelper::getPlugin('system', 'mightysources_unsplashapi')->params);
+        $client_id = $plgParams->get('apikey-unsplash', null);
+        // dd($client_id);
 
         $endpoint = "https://api.unsplash.com/$endpoint";
         $vars     = "?client_id=$client_id";
@@ -106,11 +107,10 @@ class UnsplashApi
         // NOT good :D
         if ($code != '200')
         {
-            if (\in_array(8, Factory::getUser()->groups))
-            {
-                Factory::getApplication()->enqueueMessage(json_decode($answer->body, true)['error'], 'warning');
-            }
-            return;
+            $error_message = json_decode($answer->body, true)['errors'];
+
+            Factory::getApplication()->enqueueMessage('Mighty Sources - UnsplashApi - ERROR: ' . implode(',', $error_message), 'warning');
+            return false;
         }
 
         // Return Response

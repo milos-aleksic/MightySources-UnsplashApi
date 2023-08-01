@@ -8,7 +8,7 @@
  *
  */
 
-namespace MightySources\UnsplashApi;
+namespace MightySourcesUnsplashApi;
 
 use YOOtheme\Builder\BuilderConfig;
 

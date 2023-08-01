@@ -1,11 +1,11 @@
 <?php
 
-namespace MightySources\UnsplashApi\Listener;
+namespace MightySourcesUnsplashApi\Listener;
 
 use YOOtheme\Config;
 use function YOOtheme\trans;
 
-use MightySources\UnsplashApi\Type;
+use MightySourcesUnsplashApi\Type;
 
 class LoadSourceTypes
 {
@@ -13,7 +13,7 @@ class LoadSourceTypes
     {
         $query = [
 
-            Type\UnsplashTopicsQueryType::config(),
+            // Type\UnsplashTopicsQueryType::config(),
             Type\UnsplashPhotosQueryType::config(),
 
         ];
@@ -21,7 +21,7 @@ class LoadSourceTypes
         $types = [
 
             ['UnsplashPhoto', Type\UnsplashPhotoType::config()],
-            ['UnsplashTopic', Type\UnsplashTopicType::config()],
+            // ['UnsplashTopic', Type\UnsplashTopicType::config()],
 
             ['UnsplashTag', Type\Subtype\UnsplashTagType::config()],
             // ['UnsplashPhotoLocation', Unsplash\Subtype\UnsplashPhotoLocationType::config()],
