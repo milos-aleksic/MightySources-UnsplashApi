@@ -56,8 +56,9 @@ class UnsplashPhotosQueryType
                                 'width' => '1-1',
                                 'fields' => [
                                     'query' => [
-                                        'label'       => trans('Keywords'),
-                                        'description' => 'Words separated by spaces',
+                                        'label'       => trans('Query'),
+                                        'default'     => 'Office gadgets',
+                                        'description' => 'Keywords separated by spaces',
                                     ],
                                 ],
                             ],
@@ -68,7 +69,6 @@ class UnsplashPhotosQueryType
                                     'color' => [
                                         'label'   => trans('Color'),
                                         'type'    => 'select',
-                                        'default' => '',
                                         'options' => [
                                             'All'           => '',
                                             'Black & White' => 'black_and_white',
@@ -86,7 +86,7 @@ class UnsplashPhotosQueryType
                                     ],
                                     'collections' => [
                                         'label'       => trans('Collections'),
-                                        'description' => 'Public collection ID(‘s) to filter selection. If multiple, comma-separated',
+                                        'description' => 'Public collection IDs to filter selection. If multiple, comma-separated',
                                     ],
                                 ],
                             ],
@@ -110,7 +110,6 @@ class UnsplashPhotosQueryType
                                         'label'       => trans('Orientation'),
                                         'description' => 'Filter by photo orientation',
                                         'type'    => 'select',
-                                        'default' => 'popular',
                                         'options' => [
                                             'Any'       => '',
                                             'Landscape' => 'landscape',
